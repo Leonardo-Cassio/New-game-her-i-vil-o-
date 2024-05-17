@@ -6,6 +6,7 @@ const LoginComponent = {
         <input type="password" placeholder="Senha">
         <input type="password" placeholder="Confirmar senha">
         <button @click="$emit('change-page', 'signin')">Sign In</button>
+        <button class="logar" @click="criarConta">Confirmar</button>
     </div>
     `,
     data() {
@@ -50,6 +51,7 @@ const SigninComponent = {
         <input type="text" placeholder="Email">
         <input type="password" placeholder="Senha">
         <button @click="$emit('change-page', 'login')">Login</button>
+        <button class="logar" @click="criarConta">Confirmar</button>
     </div>
     `,
     data() {
@@ -97,7 +99,7 @@ const app = Vue.createApp({
         changePage(page) {
             this.currentPage = page;
         }
-    }
+    },
 });
 
 app.component('login-component', LoginComponent);
