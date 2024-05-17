@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herói e Vilão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('img/helldivers-2-armor-customization.svg');
+            background-size: cover;
+        }
+    </style>
+    <style>
+        .barravida {
+            height: 20px;
+            border: 1px solid #ffffff;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .verde {
+            background-color: greenyellow;
+        }
+
+        .amarela {
+            background-color: yellow;
+        }
+
+        .vermelha {
+            background-color: red;
+        }
+    </style>
+    <div id="app" class="container">
+        <div class="personagem1">
+            <div class="barravida" :class="barraVidaClasse(heroi.vida)" :style="{width: heroi.vida + '%'}">
+                {{heroi.vida}}</div>
+            <div class="sprite">
+                <img src="img/t6Dd6aQfhRHJSjXGxPuDf-1200-80 copy.svg">
+            </div>
+            <h1>Helldiver</h1>
+            <div class="acoes">
+                <button @click="atacar(true)">Atirar</button>
+                <button @click="defender(true)">Defender</button>
+                <button @click="usarpocao(true)">Estimulante</button>
+                <button @click="correr(true)">Correr</button>
+            </div>
+        </div>
+        <div class="historico">
+            <div class="historicooo">
+                <h2>Comandos</h2>
+                <ul>
+                    <li v-for="mensagem in historico" class="mensagem">{{mensagem}}</li>
+                </ul>
+            </div>
+            <button style="margin: 30px;" onclick="window.location.href = 'login.html';">Login</button><br>
+            <button onclick="window.location.href = 'dashboard.html';">Dashboard</button>
+            <button id="reloadButton">Recarregar a Página</button>
+        </div>
+        <div class="personagem2">
+            <div class="barravida" :class="barraVidaClasse(vilao.vida)" :style="{width: vilao.vida + '%'}">
+                {{vilao.vida}}</div>
+            <div class="sprite">
+                <img src="img/Sem-título.svg">
+            </div>
+            <h1>Terminídeo</h1>
+            <h3>Criaturas gigantes parecidas com insetos que dependem da enxameação.</h3>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="index.js"></script>

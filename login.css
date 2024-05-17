@@ -1,0 +1,71 @@
+#app {
+    text-align: center;
+    margin: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:rgb(2, 5, 44);
+}
+
+.container {
+    background-color: #020129;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+h2 {
+    margin-top: 0;
+    color:white;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #020129;
+    color: white;
+}
+
+button {
+    background-color: rgb(15, 22, 116);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(6, 6, 177);
+}
+
+.retangulo{
+    width: 300px;
+    height: 260px;
+    border: 2px solid aqua;
+    padding: 30px;
+    border-radius: 5px;
+}
+

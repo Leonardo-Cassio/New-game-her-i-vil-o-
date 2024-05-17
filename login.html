@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Sign In</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div class="retangulo">
+        <div id="app">
+            <transition name="fade" mode="out-in">
+                <component :is="componenteAtual"></component>
+                <login-component v-if="currentPage === 'login'" @change-page="changePage"></login-component>
+                <signin-component v-else @change-page="changePage"></signin-component>
+            </transition>
+            <button onclick="window.location.href = 'index.html';">Confirmar</button>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                nome: '',
+                email: '',
+                senha: ''
+            },
+            methods: {
+                async atualizarUsuario() {
+                    try {
+                        const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                nome: this.nome,
+                                email: this.email,
+                                senha: this.senha
+                            })
+                        });
+                        if (response.ok) {
+                            alert('Dados do usuário atualizados com sucesso.');
+                        } else {
+                            alert('Erro ao atualizar dados do usuário.');
+                        }
+                    } catch (error) {
+                        console.error('Erro ao atualizar dados do usuário:', error);
+                        alert('Erro ao atualizar dados do usuário.');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+<script src="login.js"></script>

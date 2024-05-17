@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 320px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+h1 {
+    text-align: center;
+}
+
+.personagens {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.personagem {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #b9b7b7;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#heroiVida,
+#vilaoVida {
+    font-size: 18px;
+}
+
+button{
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0px 0px 320px;
+}
+
+button:hover{
+    background-color:rgb(170, 170, 170);
+    transform: translateY(-3px);
+}
+
+button:active{
+    transform: translateY(0px);
+}
