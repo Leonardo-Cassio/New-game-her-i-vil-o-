@@ -51,7 +51,7 @@ app.post('/login', async (req, res) => {
         await sql.connect(config);
         const request = new sql.Request();
         const result = await request.query(`
-            SELECT * FROM Usuarios WHERE nome = '${nome}' AND senha = '${senha}'
+            SELECT * FROM Usuarios WHERE nome = '${email}' AND senha = '${senha}'
         `);
 
         if (result.recordset.length > 0) {
@@ -71,11 +71,6 @@ app.get('/', (req, res) => {
 
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'dashboard.html'));
-});
-
-// Iniciar o servidor
-app.listen(PORT, () => {
-    console.log('Servidor Express rodando na porta ${PORT}');
 });
 
 app.post('/register', async (req, res) => {

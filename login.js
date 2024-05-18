@@ -2,30 +2,32 @@ const LoginComponent = {
     template: `
     <div class="comp1">
         <h2>Login</h2>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Senha">
-        <input type="password" placeholder="Confirmar senha">
+        <input type="text" v-model="nome" placeholder="Nome">
+        <input type="text" v-model="email" placeholder="Email">
+        <input type="password" v-model="senha" placeholder="Senha">
         <button @click="$emit('change-page', 'signin')">Sign In</button>
-        <button class="logar" @click="criarConta">Confirmar</button>
+        <button class="logar" @click="fazerLogin">Confirmar</button>
     </div>
     `,
     data() {
         return {
-            nome: '',
+            nome:'',
+            email: '',
             senha: ''
         }
     },
     methods: {
         async fazerLogin() {
             try {
-                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
+                const response = await fetch('http://localhost:3000/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
+                        email: this.email,
                         nome: this.nome,
-                        senha: this.senha
+                        senha: this.senha,
                     })
                 });
 
@@ -50,9 +52,9 @@ const SigninComponent = {
     template: `
     <div class="comp2">
         <h2>Sign In</h2>
-        <input type="text" placeholder="Nome">
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Senha">
+        <input type="text" v-model="nome" placeholder="Nome">
+        <input type="text" v-model="email" placeholder="Email">
+        <input type="password" v-model="senha" placeholder="Senha">
         <button @click="$emit('change-page', 'login')">Login</button>
         <button class="logar" @click="criarConta">Confirmar</button>
     </div>
@@ -66,12 +68,8 @@ const SigninComponent = {
     },
     methods: {
         async criarConta() {
-            if (this.senha !== this.confirmarSenha) {
-                alert('As senhas não coincidem.');
-                return;
-            }
             try {
-                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
+                const response = await fetch('http://localhost:3000/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -85,6 +83,7 @@ const SigninComponent = {
 
                 if (response.ok) {
                     alert('Conta criada com sucesso.');
+                    window.location.href = 'index.html';
                 } else {
                     alert('Erro ao criar conta.');
                 }
