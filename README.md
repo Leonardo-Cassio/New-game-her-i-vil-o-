@@ -52,7 +52,7 @@ npm start
 
 ## 🧑‍💻 Execução do Projeto
 
-Inicie o Servidor Backend: Execute o servidor backend:
+Execute o servidor backend:
 
 node server.js
 
