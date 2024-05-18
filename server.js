@@ -44,6 +44,57 @@ app.post('/atualizarVida', async (req, res) => {
     }
 });
 
+app.post('/login', async (req, res) => {
+    const { nome, senha } = req.body;
+
+    try {
+        await sql.connect(config);
+        const request = new sql.Request();
+        const result = await request.query(`
+            SELECT * FROM Usuarios WHERE nome = '${nome}' AND senha = '${senha}'
+        `);
+
+        if (result.recordset.length > 0) {
+            res.status(200).send('Login bem-sucedido.');
+        } else {
+            res.status(401).send('Credenciais inválidas.');
+        }
+    } catch (err) {
+        console.error('Erro ao fazer login:', err);
+        res.status(500).send('Erro ao fazer login.');
+    }
+});
+// Rota para servir o arquivo HTML principal
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/dashboard', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dashboard.html'));
+});
+
+// Iniciar o servidor
+app.listen(PORT, () => {
+    console.log('Servidor Express rodando na porta ${PORT}');
+});
+
+app.post('/register', async (req, res) => {
+    const { nome, email, senha } = req.body;
+
+    try {
+        await sql.connect(config);
+        const request = new sql.Request();
+        await request.query(`
+            INSERT INTO Usuarios (nome, email, senha)
+            VALUES ('${nome}', '${email}', '${senha}')
+        `);
+        res.status(201).send('Conta criada com sucesso.');
+    } catch (err) {
+        console.error('Erro ao criar conta:', err);
+        res.status(500).send('Erro ao criar conta.');
+    }
+});
+
 // Rota para fornecer os dados do herói e do vilão
 app.get('/characters', async (req, res) => {
     try {

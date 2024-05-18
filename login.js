@@ -28,10 +28,10 @@ const LoginComponent = {
                         senha: this.senha
                     })
                 });
-        
+
                 if (response.status === 200) {
                     alert('Login bem-sucedido.');
-                    window.open('index.html','_blank');
+                    window.location.href = 'index.html';
                 } else {
                     alert('Credenciais inválidas.');
                 }
@@ -39,9 +39,12 @@ const LoginComponent = {
                 console.error('Erro ao fazer login:', error);
                 alert('Erro ao fazer login.');
             }
+        },
+        alterarLoginCadastro() {
+            this.$emit('alterar', 'Cadastro');
         }
     }
-}
+};
 
 const SigninComponent = {
     template: `
@@ -63,6 +66,10 @@ const SigninComponent = {
     },
     methods: {
         async criarConta() {
+            if (this.senha !== this.confirmarSenha) {
+                alert('As senhas não coincidem.');
+                return;
+            }
             try {
                 const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
                     method: 'POST',
@@ -75,6 +82,7 @@ const SigninComponent = {
                         senha: this.senha
                     })
                 });
+
                 if (response.ok) {
                     alert('Conta criada com sucesso.');
                 } else {
@@ -84,10 +92,12 @@ const SigninComponent = {
                 console.error('Erro ao criar conta:', error);
                 alert('Erro ao criar conta.');
             }
+        },
+        alterarLoginCadastro() {
+            this.$emit('alterar', 'Login');
         }
     }
-}
-
+};
 const app = Vue.createApp({
     data() {
         return {
