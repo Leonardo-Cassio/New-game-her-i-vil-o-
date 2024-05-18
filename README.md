@@ -26,27 +26,27 @@ Banco de Dados: Microsoft Azure
 
 Framework: Vue
 
-🚀 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
-Pré-requisitos:
+### Pré-requisitos:
 
 Node.js instalado
 
 Moicrosoft Azure em execução
 
-Passos para Execução:
+## Passos para Execução:
 
-Clone o repositório:
+### Clone o repositório:
 
-git clone https://github.com/seu-usuario/jogo-heroi-vs-vilao.git
+git clone [https://github.com/seu-usuario/jogo-heroi-vs-vilao.git](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao.git)
 
 cd jogo-heroi-vs-vilao
 
-Instale as dependências:
+## Instale as dependências:
 
 npm install
 
-Inicie o servidor:
+## Inicie o servidor:
 
 npm start
 
