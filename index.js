@@ -1,5 +1,5 @@
 const { createApp } = Vue;
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://new-game-heroi-e-vilao.onrender.com';
 
 createApp({
     data() {

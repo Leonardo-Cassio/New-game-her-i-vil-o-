@@ -19,7 +19,7 @@ const LoginComponent = {
     methods: {
         async fazerLogin() {
             try {
-                const response = await fetch('http://localhost:3000/login', {
+                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ const SigninComponent = {
     methods: {
         async criarConta() {
             try {
-                const response = await fetch('http://localhost:3000/register', {
+                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
