@@ -32,13 +32,13 @@ Framework: Vue
 
 Node.js instalado
 
-Moicrosoft Azure em execução
+Microsoft Azure em execução
 
 ## Passos para Execução:
 
 ### Clone o repositório:
 
-git clone [https://github.com/seu-usuario/jogo-heroi-vs-vilao.git](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao.git)
+git clone https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao.git
 
 cd jogo-heroi-vs-vilao
 
