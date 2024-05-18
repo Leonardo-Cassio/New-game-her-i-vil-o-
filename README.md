@@ -50,6 +50,12 @@ npm install
 
 npm start
 
+## 🧑‍💻 Execução do Projeto
+
+Inicie o Servidor Backend: Execute o servidor backend:
+
+node server.js
+
 ## 🌐 Funcionalidades em Detalhe
 📊 Dashboard
 
