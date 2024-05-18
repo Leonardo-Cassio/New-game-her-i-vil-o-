@@ -1,6 +1,7 @@
 
 # 🏹 Jogo de Aventura: Herói vs Vilão 🦹‍♂️
-Bem-vindo ao Jogo: Herói vs Vilão! 🎮 Este jogo permite que os jogadores acompanhem e atualizem a vida do herói e do vilão através de um dashboard interativo. Além disso, há uma página de login onde os usuários podem criar contas e fazer login para participar do jogo. 🛡️
+Bem-vindo ao Jogo: Herói vs Vilão! 
+🎮 Este jogo permite que os jogadores acompanhem e atualizem a vida do herói e do vilão através de um dashboard interativo. Além disso, há uma página de login onde os usuários podem criar contas e fazer login para participar do jogo. 🛡️
 
 ## 🌟 Funcionalidades:
 
@@ -36,9 +37,11 @@ Descrição: Página onde os usuários podem criar uma conta ou fazer login.
 Formulários:
 
 Login:
+
 Campos: 📧 Email, 🔒 Senha, 🔒 Confirmar Senha
 
 Sign in:
+
 Campos: 🧑 Nome, 📧 Email, 🔒 Senha
 
 ### Divirta-se jogando! 🎉
