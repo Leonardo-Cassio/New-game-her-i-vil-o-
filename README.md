@@ -9,7 +9,11 @@ Bem-vindo ao Jogo: Herói vs Vilão!
 
 🎮 Tela do Jogo: Há comandos para jogar com herói (atacar, correr, usar estimulante e defender) e vencer o vilão.
 
+![Tela do Jogo](![hero1](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/59781002-7058-4dd6-af90-3778b14fc0cd))
+
 📊 Tela de Dashboard: Atualize em tempo real a vida do herói e do vilão.
+
+![Dashboard](![dashhero](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/55ee869b-d65c-416f-9175-39f9c29fead9))
 
 🔑 Página de Login/Cadastro: Usuários podem criar uma nova conta ou fazer login para acessar o jogo.
 
@@ -42,8 +46,12 @@ Login:
 
 Campos: 📧 Email, 🔒 Senha, 🔒 Confirmar Senha
 
+![Login](![loginhero](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/857e7e7e-4e72-45c5-bd62-c5f39b35a893))
+
 Sign in:
 
 Campos: 🧑 Nome, 📧 Email, 🔒 Senha
+
+![Sign in](![signinhero](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/172117c3-5d38-4a4e-aa46-076db0b0ff1f))
 
 ### Divirta-se jogando! 🎉
