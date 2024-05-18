@@ -9,7 +9,7 @@ Bem-vindo ao Jogo: Herói vs Vilão!
 
 🎮 Tela do Jogo: Há comandos para jogar com herói (atacar, correr, usar estimulante e defender) e vencer o vilão.
 
-![Tela do Jogo](![hero1](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/59781002-7058-4dd6-af90-3778b14fc0cd))
+<img src="![hero1](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/58bc7f65-e415-4b03-af4f-7b5497bb398c)">
 
 📊 Tela de Dashboard: Atualize em tempo real a vida do herói e do vilão.
 
