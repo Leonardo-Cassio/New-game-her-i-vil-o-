@@ -25,9 +25,9 @@ const LoginComponent = {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        email: this.email,
                         nome: this.nome,
-                        senha: this.senha,
+                        email: this.email,
+                        senha: this.senha
                     })
                 });
 
