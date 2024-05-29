@@ -18,41 +18,6 @@
             </transition>
         </div>
     </div>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                nome: '',
-                email: '',
-                senha: ''
-            },
-            methods: {
-                async atualizarUsuario() {
-                    try {
-                        const response = await fetch('https://new-game-heroi-e-vilao.onrender.com', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                nome: this.nome,
-                                email: this.email,
-                                senha: this.senha
-                            })
-                        });
-                        if (response.ok) {
-                            alert('Dados do usuário atualizados com sucesso.');
-                        } else {
-                            alert('Erro ao atualizar dados do usuário.');
-                        }
-                    } catch (error) {
-                        console.error('Erro ao atualizar dados do usuário:', error);
-                        alert('Erro ao atualizar dados do usuário.');
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

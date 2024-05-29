@@ -1,4 +1,4 @@
-const LoginComponent = {
+const Login = {
     template: `
     <div class="comp1">
         <h2>Login</h2>
@@ -11,10 +11,10 @@ const LoginComponent = {
     `,
     data() {
         return {
-            nome:'',
+            nome: '',
             email: '',
             senha: ''
-        }
+        };
     },
     methods: {
         async fazerLogin() {
@@ -41,14 +41,11 @@ const LoginComponent = {
                 console.error('Erro ao fazer login:', error);
                 alert('Erro ao fazer login.');
             }
-        },
-        alterarLoginCadastro() {
-            this.$emit('alterar', 'Cadastro');
         }
     }
 };
 
-const SigninComponent = {
+const Signin = {
     template: `
     <div class="comp2">
         <h2>Sign In</h2>
@@ -69,7 +66,7 @@ const SigninComponent = {
     methods: {
         async criarConta() {
             try {
-                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com/register', {
+                const response = await fetch('http://localhost:3000/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -91,17 +88,14 @@ const SigninComponent = {
                 console.error('Erro ao criar conta:', error);
                 alert('Erro ao criar conta.');
             }
-        },
-        alterarLoginCadastro() {
-            this.$emit('alterar', 'Login');
         }
     }
 };
+
 const app = Vue.createApp({
     data() {
         return {
-            currentPage: 'login'
-
+            componenteAtual: 'login'
         };
     },
     methods: {
@@ -109,9 +103,10 @@ const app = Vue.createApp({
             this.currentPage = page;
         }
     },
+    components:{
+        Login,
+        Signin
+    }
 });
-
-app.component('login-component', LoginComponent);
-app.component('signin-component', SigninComponent);
 
 app.mount('#app');
