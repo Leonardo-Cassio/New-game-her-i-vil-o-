@@ -74,9 +74,9 @@ Formulários:
 
 Login:
 
-Campos: 📧 Email, 🔒 Senha, 🔒 Confirmar Senha
+Campos: 🧑 Nome, 🔒 Email, 🔒 Senha
 
-![loginhero](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/c25ee077-2703-491e-80fd-323a02d5b399)
+![new](https://github.com/Leonardo-Cassio/New-game-heroi-e-vilao/assets/143566209/dcc26b12-e4dc-4700-a5c8-a969e02f402b)
 
 Sign in:
 
