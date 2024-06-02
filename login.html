@@ -12,13 +12,11 @@
     <div class="retangulo">
         <div id="app">
             <transition name="fade" mode="out-in">
-                <component :is="componenteAtual"></component>
-                <login-component v-if="currentPage === 'login'" @change-page="changePage"></login-component>
-                <signin-component v-else @change-page="changePage"></signin-component>
+                <component :is="componenteAtual" @change-page="alterarComponente"></component>
             </transition>
         </div>
     </div>
+    <script src="login.js"></script>
 </body>
 
 </html>
-<script src="login.js"></script>

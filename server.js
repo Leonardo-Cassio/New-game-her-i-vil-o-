@@ -45,13 +45,13 @@ app.post('/atualizarVida', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
-    const { nome, senha } = req.body;
+    const { nome, email, senha } = req.body;
 
     try {
         await sql.connect(config);
         const request = new sql.Request();
         const result = await request.query(`
-            SELECT * FROM Usuarios WHERE nome = '${email}' AND senha = '${senha}'
+            SELECT * FROM Usuarios WHERE nome = '${nome}' AND email = '${email} AND senha = '${senha}'
         `);
 
         if (result.recordset.length > 0) {
@@ -64,6 +64,7 @@ app.post('/login', async (req, res) => {
         res.status(500).send('Erro ao fazer login.');
     }
 });
+
 // Rota para servir o arquivo HTML principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));

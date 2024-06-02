@@ -5,7 +5,7 @@ const Login = {
         <input type="text" v-model="nome" placeholder="Nome">
         <input type="text" v-model="email" placeholder="Email">
         <input type="password" v-model="senha" placeholder="Senha">
-        <button @click="$emit('change-page', 'signin')">Sign In</button>
+        <button @click="$emit('change-page', 'Signin')">Sign In</button>
         <button class="logar" @click="fazerLogin">Confirmar</button>
     </div>
     `,
@@ -52,7 +52,7 @@ const Signin = {
         <input type="text" v-model="nome" placeholder="Nome">
         <input type="text" v-model="email" placeholder="Email">
         <input type="password" v-model="senha" placeholder="Senha">
-        <button @click="$emit('change-page', 'login')">Login</button>
+        <button @click="$emit('change-page', 'Login')">Login</button>
         <button class="logar" @click="criarConta">Confirmar</button>
     </div>
     `,
@@ -61,12 +61,12 @@ const Signin = {
             nome: '',
             email: '',
             senha: ''
-        }
+        };
     },
     methods: {
         async criarConta() {
             try {
-                const response = await fetch('http://localhost:3000/register', {
+                const response = await fetch('https://new-game-heroi-e-vilao.onrender.com/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -95,15 +95,15 @@ const Signin = {
 const app = Vue.createApp({
     data() {
         return {
-            componenteAtual: 'login'
+            componenteAtual: 'Login'
         };
     },
     methods: {
-        changePage(page) {
-            this.currentPage = page;
+        alterarComponente(componente) {
+            this.componenteAtual = componente;
         }
     },
-    components:{
+    components: {
         Login,
         Signin
     }
